@@ -54,8 +54,7 @@
                 "name": "Nazan Öztürk",
                 "label": "Senior Data Scientist",
                 "email": "nazan.ozturk@example.com",
-                "phone": "(555) 987-6543",
-                "url": "https://linkedin.com/in/nazanozturkdata",
+                "url": "https://linkedin.com/in/nazann",
                 "summary": "Highly motivated and results-oriented Senior Data Scientist with 12+ years of experience leading cross-functional teams to build and deploy advanced machine learning models. Expertise in predictive modeling, large-scale data processing, and cloud deployment. Proven ability to translate complex data into strategic business solutions."
             },
             "work": [
@@ -182,6 +181,13 @@
                 <!-- Experience items will be injected here -->
             </div>
         </section>
+ <!-- Education Section -->
+        <section class="mt-8">
+            <h2 class="section-title">Education</h2>
+            <div id="education">
+                <!-- Education items will be injected here -->
+            </div>
+        </section>
 
         <!-- Skills Section -->
         <section class="mt-8">
@@ -194,7 +200,7 @@
         <!-- Languages Section (NEW) -->
         <section class="mt-8">
             <h2 class="section-title">Languages</h2>
-            <div id="languages-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div id="languages-list" class="flex flex-wrap gap-3">
                 <!-- Languages will be injected here -->
             </div>
         </section>
@@ -212,14 +218,6 @@
             <h2 class="section-title">Certifications</h2>
             <div id="certifications-list" class="flex flex-wrap gap-2">
                 <!-- Certification badges will be injected here -->
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="mt-8">
-            <h2 class="section-title">Education</h2>
-            <div id="education">
-                <!-- Education items will be injected here -->
             </div>
         </section>
 
@@ -281,7 +279,7 @@
                     contactInfo.innerHTML += `
                         <a href="${basics.url}" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-emerald-600 transition duration-150">
                             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            ${basics.url.replace(/(https?:\/\/)/, '').replace(/www\./, '').split('/')[0]}...
+                            LinkedIn
                         </a>
                     `;
                 }
@@ -361,11 +359,11 @@
             // 2. Call the rendering functions
             renderBasics();
             renderWork();
-            renderSkills();
-            renderLanguages(); // Call the new function
-            renderPublications(); // Call the new function
-            renderCertifications(); // Call the new function
             renderEducation();
+            renderSkills();
+            renderLanguages(); 
+            renderPublications();
+            renderCertifications();
         });
 
         /*
@@ -380,6 +378,7 @@
     </script>
 </body>
 </html>
+
 
 
 
