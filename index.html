@@ -60,10 +60,10 @@
             },
             "work": [
                 {
-                    "company": "AI Solutions Group",
-                    "position": "Lead Data Scientist",
-                    "startDate": "2024-03-01",
-                    "endDate": "Present",
+                    "company": "Douglas GmbH,
+                    "position": "Data Scientist",
+                    "startDate": "2024-05-01",
+                    "endDate": "2025-01-30",
                     "highlights": [
                         "Designed and deployed a deep learning model for fraud detection, reducing false positives by 15% and saving the company $1.2M annually.",
                         "Managed a team of 4 data scientists, overseeing project lifecycles from ideation to production.",
@@ -71,10 +71,10 @@
                     ]
                 },
                 {
-                    "company": "Tech Innovators Inc.",
-                    "position": "Senior Data Scientist",
-                    "startDate": "2022-01-01",
-                    "endDate": "2024-02-29",
+                    "company": "Also Group",
+                    "position": "Data Scientist",
+                    "startDate": "2018-04-16",
+                    "endDate": "2024-04-30",
                     "highlights": [
                         "Developed and validated A/B testing frameworks for marketing campaigns, increasing conversion rates by 8%.",
                         "Built a recommendation engine using collaborative filtering in Python (Surprise library), enhancing user engagement by 20%.",
@@ -82,10 +82,10 @@
                     ]
                 },
                 {
-                    "company": "FinTech Dynamics",
-                    "position": "Data Scientist",
-                    "startDate": "2020-07-01",
-                    "endDate": "2021-12-31",
+                    "company": "CNH Industrial",
+                    "position": "Pricing Data Analyst",
+                    "startDate": "2015-12-01",
+                    "endDate": "2018-03-31",
                     "highlights": [
                         "Created predictive models for stock price volatility using time-series analysis (ARIMA, Prophet).",
                         "Automated weekly reporting dashboards using Tableau and SQL, saving analysts 5 hours per week.",
@@ -93,10 +93,10 @@
                     ]
                 },
                 {
-                    "company": "Analytics Hub",
-                    "position": "Junior Analyst",
-                    "startDate": "2018-09-01",
-                    "endDate": "2020-06-30",
+                    "company": "Pirelli",
+                    "position": "Pricing Analyst",
+                    "startDate": "2016-01-01",
+                    "endDate": "2016-09-30",
                     "highlights": [
                         "Conducted exploratory data analysis (EDA) on customer churn data using Pandas and Matplotlib.",
                         "Built and maintained ETL processes for key transactional databases.",
@@ -104,10 +104,10 @@
                     ]
                 },
                 {
-                    "company": "State University Research",
-                    "position": "Data Science Intern",
-                    "startDate": "2017-06-01",
-                    "endDate": "2018-08-31",
+                    "company": "Türk Telekom",
+                    "position": "Data Analyst",
+                    "startDate": "2013-07-01",
+                    "endDate": "2015-12-31",
                     "highlights": [
                         "Assisted PhD candidates with data collection and cleaning for machine learning experiments.",
                         "Wrote initial Python scripts to perform basic statistical tests.",
@@ -325,14 +325,13 @@
                 `).join('');
             }
             
-            // Renders Languages (NEW)
+            // Renders Languages (UPDATED to be compact)
             function renderLanguages() {
                 const languagesContainer = document.getElementById('languages-list');
                 languagesContainer.innerHTML = languages.map(lang => `
-                    <div class="p-3 bg-gray-50 rounded-lg">
-                        <p class="font-semibold text-gray-800">${lang.language}</p>
-                        <p class="text-sm text-gray-600">${lang.fluency}</p>
-                    </div>
+                    <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 border border-gray-200">
+                        ${lang.language} (<span class="ml-1 font-normal text-gray-500">${lang.fluency.replace(' ', '\u00A0')}</span>)
+                    </span>
                 `).join('');
             }
             
@@ -381,5 +380,6 @@
     </script>
 </body>
 </html>
+
 
 
